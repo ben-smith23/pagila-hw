@@ -1,5 +1,5 @@
 # pagila-hw
-[![](https://github.com/mikeizbicki/pagila-hw/workflows/tests/badge.svg)](https://github.com/mikeizbicki/pagila-hw/actions?query=workflow%3Atests)
+[![](https://github.com/ben-smith23/pagila-hw/workflows/tests/badge.svg)](https://github.com/ben-smith23/pagila-hw/actions?query=workflow%3Atests)
 
 ## Background
 
@@ -18,7 +18,7 @@ The following picture illustrates the database's structure:
    and here we use submodules to include the original pagila repo.
    In order to clone the repo with the submodules, you need to run the commands
    ```
-   $ git clone https://github.com/mikeizbicki/pagila-hw
+   $ git clone https://github.com/ben-smith23/pagila-hw
    $ cd pagila-hw
    $ git submodule init
    $ git submodule update
