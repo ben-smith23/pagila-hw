@@ -31,7 +31,7 @@ The following picture illustrates the database's structure:
        For each file, write a single `SELECT` statement that computes the correct answer.
     1. The folder `expected` contains the expected outputs for each problem.
        You can verify your answer by checking that the output of your `SELECT` statement matches the output in the `answers` folder.
-    1. The script `check_answers.sh` will perform these checks for you automatically using the `diff` command.
+    1. The script `run_tests.sh` will perform these checks for you automatically using the `diff` command.
        It must be run from within a postgres docker container.
 
        Bring up the docker container with the command
@@ -40,10 +40,18 @@ The following picture illustrates the database's structure:
        ```
        Then run the the test case script with
        ```
-       $ docker-compose exec pg ./check_answers.sh
+       $ docker-compose exec pg ./run_tests.sh
        ```
-    1. **Grading:**
-        If all test cases pass, you will receive full credit.
-        For the first failing test case, you will receive -4 points.
-        For each additional failing test case, you will receive -1 point. 
 1. Upload a link to your forked github repo on sakai.
+
+   > **Note:**
+   > The github actions for this project are currently broken because they are not running the correct scripts.
+   > You will have to modify the file `.github/workflows/tests.yml` to run the correct script.
+   > Once you've done that, you are likely to find that some test cases will pass on the lambda server but fail on github actions.
+   > You will then have to figure out why they are failing on github actions and fix them for full credit.
+
+1. **Grading:**
+    If all test cases pass, you will receive full credit.
+    For the first failing test case, you will receive -4 points.
+    For each additional failing test case, you will receive -1 point. 
+    If the github actions do not run correctly, you will receive a 0.
