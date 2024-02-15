@@ -3,6 +3,6 @@
  * Name the column Actor Name, and sort the results alphabetically.
  */
 
-SELECT UPPER(CONCAT(first_name, ' ', last_name)) AS "Actor Name"
+SELECT first_name || ' ' || last_name AS "Actor Name"
 FROM actor
-ORDER BY "Actor Name" ASC;
+ORDER BY "Actor Name";
